@@ -18,11 +18,12 @@ $(NAME) : $(OBJS)
 	$(CC) $(FLAGS) -c $< -o $@
 
 clean:
-	@rm %.o
+	@rm -rf *.o
 
 fclean: clean
 	@rm -rf $(NAME)
+	@rm -rf $(NAME).dSYM
 
 re: fclean all
 
-.PHONY: all, clean, fclean re
+.PHONY: all clean fclean re
